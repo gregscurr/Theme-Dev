@@ -8,12 +8,26 @@
 		);
 	}
 	add_action( 'init', 'register_td_menus' );
-	// Register Sidebar
+	
+	
+	// Register Sidebars
+	// Primary, Left Footer, Right Footer
+	if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+	'name' => 'Primary Sidebar',
+	'id' => 'primary-sidebar',
+	'description' => 'Appears to the right of the content area.',
+	'before_widget' => '<li id="%1$s" class="widget %2$s">',
+	'after_widget' => '</li>',
+	'before_title' => '<h2 class="widgettitle">',
+	'after_title' => '</h2>',
+	));
+	}
 	if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
 	'name' => 'Left Footer Widgets',
 	'id' => 'left-footer',
-	'description' => 'Appears as the left footer widget area',
+	'description' => 'Appears as the left footer widget area.',
 	'before_widget' => '<li id="%1$s" class="widget %2$s">',
 	'after_widget' => '</li>',
 	'before_title' => '<h3 class="widgettitle">',
@@ -24,13 +38,14 @@
 	register_sidebar(array(
 	'name' => 'Right Footer Widgets',
 	'id' => 'right-footer',
-	'description' => 'Appears as the right footer widget area',
+	'description' => 'Appears as the right footer widget area.',
 	'before_widget' => '<li id="%1$s" class="widget %2$s">',
 	'after_widget' => '</li>',
 	'before_title' => '<h3 class="widgettitle">',
 	'after_title' => '</h3>',
 	));
 	}
+
 // Let's hook in our function with the javascript files with the wp_enqueue_scripts hook 
  
 
@@ -55,6 +70,7 @@ function add_custom_meta_box() {
 		'normal', // $context
 		'high'); // $priority
 }
+
 add_action('add_meta_boxes', 'add_custom_meta_box');
   
 // Field Array
@@ -174,4 +190,13 @@ function save_custom_meta($post_id) {
 	} // end foreach
 }
 add_action('save_post', 'save_custom_meta');  
+
+
+// options framework
+if ( !function_exists( 'optionsframework_init' ) ) {
+	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/' );
+	require_once dirname( __FILE__ ) . '/inc/options-framework.php';
+}
+
+
 ?>

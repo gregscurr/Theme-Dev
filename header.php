@@ -40,4 +40,4 @@
 				<div id="nav-toggle"><h3>Navigation</h3></div>
 				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_id' => 'responsive-nav', 'container_class' => 'nav-links' ) ); ?>
 			</nav>
-			<div id="main">
+			<div id="main"class="row">

@@ -161,15 +161,17 @@ line-height: 10px;
 line-height: 1rem;
 margin-bottom: 2rem;
 }
-code{
+code {
 padding: 2px 4px;
 color: #d14;
 white-space: nowrap;
 background-color: #f7f7f9;
 border: 1px solid #e1e1e8;
 }
-
-
+img {
+display:block;
+max-width:100%;
+}
 h1{
 font-size:32px;
 font-size:3.2rem;
@@ -250,12 +252,10 @@ width: 100%;
 }
 
 .title{
-background-color:#ebebeb;
 font-size:24px;
 font-size:2.4rem;
-padding:10px 10px;
+padding:10px 0;
 margin:0 0 20px;
-border-left:4px solid #555;
 }
 .post-meta{
 font-style:italic;
