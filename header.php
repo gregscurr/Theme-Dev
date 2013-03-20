@@ -47,6 +47,5 @@
 			<?php echo of_get_option( 'themedev_featured_bar' ); ?>
 		</div>
 	<?php endif; ?>
-
 <?php endif; ?>
 			<div id="main"class="row">

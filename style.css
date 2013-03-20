@@ -2,7 +2,7 @@
 Theme Name: Theme Dev
 Theme URI: http://www.theme-dev.com
 Description: A WordPress theme framework built mobile first for responsiveness and optimized for speed and search engine optimization. Created using CSS3, HTML5 with semantics in mind.
-Version: 0.5
+Version: 0.5.1
 Author: William Patton
 Author URI: http://www.pattonwebz.com
 Tags: white, grey, one-column, responsive, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
@@ -260,6 +260,9 @@ margin:0 0 20px;
 }
 .post-meta{
 font-style:italic;
+}
+#featured-bar {
+margin-top: 1.5rem;
 }
 #nav-toggle{
 font-size:18px;

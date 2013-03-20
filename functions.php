@@ -77,14 +77,14 @@ add_action('add_meta_boxes', 'add_custom_meta_box');
 $prefix = 'custom_';
 $custom_meta_fields = array(
 	array(
-		'label'=> 'Text Input',
-		'desc'	=> 'A description for the field.',
+		'label'=> 'Custom Title Tag',
+		'desc'	=> 'Use this box to add a custom Title tag to your page.',
 		'id'	=> $prefix.'text',
 		'type'	=> 'text'
 	),
 	array(
-		'label'=> 'Textarea',
-		'desc'	=> 'A description for the field.',
+		'label'=> 'Meta Description',
+		'desc'	=> 'Enter a meta description to the page.',
 		'id'	=> $prefix.'textarea',
 		'type'	=> 'textarea'
 	),
@@ -134,25 +134,30 @@ echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce
 				switch($field['type']) {
 					// case items will go here
 					// text
-case 'text':
-	echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="30" />
-		<br /><span class="description">'.$field['desc'].'</span>';
-break;
+					case 'text':
+						echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="30" />
+							<br /><span class="description">'.$field['desc'].'</span>';
+					break;
 
-// textarea
-case 'textarea':
-	echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" cols="60" rows="4">'.$meta.'</textarea>
-		<br /><span class="description">'.$field['desc'].'</span>';
-break;
+					// textarea
+					case 'textarea':
+						echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" cols="60" rows="4">'.$meta.'</textarea>
+							<br /><span class="description">'.$field['desc'].'</span>';
+					break;
+					// textarea
+					case 'textarea':
+						echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" cols="60" rows="4">'.$meta.'</textarea>
+							<br /><span class="description">'.$field['desc'].'</span>';
+					break;
+					// select
+					case 'select':
+						echo '<select name="'.$field['id'].'" id="'.$field['id'].'">';
+						foreach ($field['options'] as $option) {
+							echo '<option', $meta == $option['value'] ? ' selected="selected"' : '', ' value="'.$option['value'].'">'.$option['label'].'</option>';
+						}
+						echo '</select><br /><span class="description">'.$field['desc'].'</span>';
+					break;
 
-// select
-case 'select':
-	echo '<select name="'.$field['id'].'" id="'.$field['id'].'">';
-	foreach ($field['options'] as $option) {
-		echo '<option', $meta == $option['value'] ? ' selected="selected"' : '', ' value="'.$option['value'].'">'.$option['label'].'</option>';
-	}
-	echo '</select><br /><span class="description">'.$field['desc'].'</span>';
-break;
 
 				} //end switch
 		echo '</td></tr>';

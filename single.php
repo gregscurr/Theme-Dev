@@ -4,7 +4,7 @@
  */
  get_header();
 ?>
-		<div id="content">
+		<div id="content" class="col span_16 clr">
 			<?php // This is the start of our loop ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -20,9 +20,10 @@
 				<div class="clearfix"></div>
 				
 			</article>
-			<?php endwhile; // End the loop ?>				
+			<?php endwhile; // End the loop ?>
 		</div>
 
 <?php 
+get_sidebar();
 get_footer();
 ?>
