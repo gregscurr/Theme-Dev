@@ -40,4 +40,13 @@
 				<div id="nav-toggle"><h3>Navigation</h3></div>
 				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_id' => 'responsive-nav', 'container_class' => 'nav-links' ) ); ?>
 			</nav>
+			
+<?php if ( of_get_option( 'themedev_display_featured_bar' ) ) : ?>
+	<?php if ( of_get_option( 'themedev_featured_bar' ) ) : ?>
+		<div id="featured-bar" class="row featured-bar">
+			<?php echo of_get_option( 'themedev_featured_bar' ); ?>
+		</div>
+	<?php endif; ?>
+
+<?php endif; ?>
 			<div id="main"class="row">

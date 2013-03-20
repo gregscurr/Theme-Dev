@@ -285,6 +285,23 @@ function optionsframework_options() {
 		'type' => 'editor',
 		'settings' => $wp_editor_settings );
 
+	$options[] = array(
+        'name' => 'Homepage Options',
+        'type' => 'heading');
+		
+	$options[] = array(
+		'name' => __('Home Tagline', 'options_framework_theme'),
+		'desc' => __('Display the home page featured tagline.', 'options_framework_theme'),
+		'id' => 'themedev_display_featured_bar',
+		'std' => 0,
+		'type' => 'checkbox');
+		
+	$options[] = array(
+		'name' => __('Home Featured Bar Text'),
+		'desc' => __('Enter the text you want to appear on the homepage.'),
+		'id' => 'themedev_featured_bar',
+		'type' => 'textarea');
+		
 	return $options;
 }
 
