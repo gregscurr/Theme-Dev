@@ -4,8 +4,8 @@
  */
 ?>
 	</div> <!-- #main -->
-<div id="footer">
-<div id="left-widget-area">
+<div id="footer" class="row">
+<div class="col span_10 clr">
    <ul>
       <?php
 		  if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('left-footer') ) :
@@ -13,7 +13,7 @@
 	  ?>
    </ul>
 </div>
-<div id="right-widget-area">
+<div class="col span_14 clr">
    <ul>
       <?php
 		  if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('right-footer') ) :
