@@ -29,11 +29,8 @@
 					<h1 class="site-title"><?php echo get_bloginfo ( 'title', 'display' ); ?></h1>
 					<h2 class="tagline"><?php bloginfo ( 'description' ); ?></h2>
 				</hgroup>
-				<div id= "social" class="col span_6 clr">
-					<a href="https://github.com/pattonwebz/theme-dev" class="genericon genericon-github"></a>
-					<a href="http://www.facebook.com/ThemeDevFramework" class="genericon genericon-facebook"></a>
-					<a href="https://twitter.com/Theme_Dev_Frame" class="genericon genericon-twitter"></a>
-					<a href="https://plus.google.com/u/0/b/100985048306496223683/" class="genericon genericon-googleplus"></a>
+				<div id="header-banner" class="col span_6 clr">
+					
 				</div>
 			</header>
 			<nav id="site-nav" class="main-navigation" role="navigation">

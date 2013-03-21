@@ -294,6 +294,10 @@ content: '\f501';
     -webkit-font-smoothing: antialiased;
     vertical-align: top;
 }
+#social {
+font-size: 75px;
+margin-bottom: 1.5rem;
+}
 .post-meta{
 padding:10px;
 }
