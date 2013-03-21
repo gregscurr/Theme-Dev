@@ -1,6 +1,6 @@
 <?php
 
-if ( ! isset( $content_width ) ) $content_width = 900;
+if ( ! isset( $content_width ) ) $content_width = 755;
 	function register_td_menus() {
 		register_nav_menus(
 			array(
