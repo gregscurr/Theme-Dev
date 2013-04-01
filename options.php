@@ -301,7 +301,12 @@ function optionsframework_options() {
 		'desc' => __('Enter the text you want to appear on the homepage.'),
 		'id' => 'themedev_featured_bar',
 		'type' => 'textarea');
-		
+	
+	$options[] = array(
+		'name' => __('Header Banner'),
+		'desc' => __('Content for the top banner, most code gets stripped from here.'),
+		'id' => 'header-banner',
+		'type' => 'textarea');
 	return $options;
 }
 

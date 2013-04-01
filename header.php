@@ -29,8 +29,10 @@
 					<h1 class="site-title"><?php echo get_bloginfo ( 'title', 'display' ); ?></h1>
 					<h2 class="tagline"><?php bloginfo ( 'description' ); ?></h2>
 				</hgroup>
-				<div id="header-banner" class="col span_6 clr">
-					
+				<div id="header-banner" class="col span_8 clr">
+					<?php if ( of_get_option( 'header-banner' ) ) : ?>
+						<?php echo of_get_option( 'header-banner' ); ?>
+					<?php endif; ?>
 				</div>
 			</header>
 			<nav id="site-nav" class="main-navigation" role="navigation">
