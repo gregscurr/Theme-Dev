@@ -74,15 +74,68 @@ font-size:62.5%;
 }
 body{
 background:#f4f4f4;
-font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-font-size:17px;
-font-size:1.7rem;
+font-family:Georgia,"Times New Roman",Times,serif;
+font-size:20px;
+font-size:2rem;
 line-height: 20px;
 line-height: 2rem;
-text-shadow: 0 1px 1px #d4d4d4;
-color:#555555;
+color:#222222;
+}
+#site-head{
+background:#ADD8E6;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+	display:block;
+	z-index:999;
+}
+#site-head h1,
+#site-head span{
+display:block;
+padding-bottom:0;
+}
+#site-head .col {
+min-height:40px;
+}
+.logo-cont {
+text-align: center;
+padding:10px 5px;
+}
+#social{
+text-align:center;
+font-size:30px;
+margin:5px 10px;
+}
+
+#site-title{
+font-size:30px;
+font-size:3rem;
+}
+#head-nav li{
+float:left;
+}
+#head-nav a {
+display:block;
+min-width:100px;
+max-width:200px;
+font-size:14px;
+overflow:hidden;
+text-overflow: ellipsis;
+white-space:nowrap;
+height:100%;
+text-align:center;
+padding:10px 5px;
+}
+#head-nav .current-menu-item,
+#head-nav li :hover {
+background:#dfffff;
+}
+#head-nav .children{
+display:none;
 }
 h1,h2,h3,h4,h5,h6{
+font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 clear:both;
 }
 p{
@@ -99,7 +152,7 @@ ins{
 
 }
 strong{
-
+font-weight:bold;
 }
 sub{
 
@@ -215,11 +268,10 @@ a,a:visited{
 color: #222;
 }
 #wrap{
-max-width:300px;
+max-width:1200px;
 margin-left:auto;
 margin-right:auto;
 padding: 20px 28px;
-margin-top: 15px;
 background-color: white;
 -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
@@ -227,26 +279,6 @@ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 -webkit-border-radius: 4px 4px 0 0;
 -moz-border-radius: 4px 4px 0 0;
 border-radius: 4px 4px 0 0;
-}
-#branding {
-text-align:center;
-background-color:#ffffff;
-border-bottom: 1px solid #ebebeb;
-}
-#branding h1,
-#branding h2
-{
-}
-.site-title, .tagline {
-margin:0.5rem 0;
-}
-.site-title{
-font-size:30px;
-font-size:3rem;
-}
-.tagline{
-font-size:24px;
-font-size:2.4rem;
 }
 #site-nav {
 padding: 10px;
@@ -257,10 +289,12 @@ width: 100%;
 }
 
 .title{
-font-size:24px;
-font-size:2.4rem;
+font-size:30px;
+font-size:3rem;
+letter-spacing: 2px;
 padding:10px 0;
 margin:0 0 20px;
+
 }
 .post-meta{
 font-style:italic;
@@ -297,10 +331,6 @@ content: '\f501';
     display: inline-block;
     -webkit-font-smoothing: antialiased;
     vertical-align: top;
-}
-#social {
-font-size: 75px;
-margin-bottom: 1.5rem;
 }
 .post-meta{
 padding:10px;
@@ -467,66 +497,7 @@ vertical-align: top;
 .genericon-link:before { content: '\f107'; }
 .genericon-chat:before { content: '\f108'; }
 .genericon-audio:before { content: '\f109'; }
-@media only screen and (min-width: 480px) {
-	#wrap{
-	max-width:420px;
-	}
-	}
-@media only screen and (min-width: 600px) {
-	#wrap{
-	max-width:560px;
-	}
-	}
-@media only screen and (min-width: 768px) {
-	#wrap{
-	max-width:720px;
-	}
-	}
-@media only screen and (min-width: 992px) {
-	#wrap{
-	max-width:1200px;
-	}	
-	#branding {
-	text-align:left;
-	font-size:32px;
-	}
-	#branding h1{
-	font-size:36px;
-	font-size:3.6rem;
-	}
-	.title{
-	font-size:26px;
-	font-size:2.6rem;
-	}
-	.current-menu-item{
-	text-decoration:underline;
-	}
-	#left-widget-area{
-	float:left;
-	width:28%;
-	}
-	#right-widget-area{
-	float:left;
-	width:69%;
-	margin-left:3%;
-	}
-	#nav-toggle{
-	display:none;
-	}
-	#responsive-nav{
-	display:inline-block !important;
-	width:100%;
-	}
-	#responsive-nav li{
-	float:left;
-	min-width:12%;
-	text-align:center;
-	border:none;
-	}
-	.sub-menu {
-	display: none;
-	}
-	}
+
 
 
 /**
@@ -722,4 +693,78 @@ margin-bottom: 1.5rem;
 	.span_22 { width: 91.5%; }
 	.span_23 { width: 95.75%; }
 	.span_24 { width: 100%; }
+}
+#cta-block{
+font-family: Georgia,"Times New Roman",Times,serif;
+font-size: 22px;
+font-size: 2.2rem;
+font-style: italic;
+padding: 0;
+margin: 0;
+display: block;
+text-align: center;
+margin-top:40px;
+margin-top:4rem;
+text-shadow: 0 1px 1px #D4D4D4;
+}
+.feat-sec {
+padding: 60px 100px;
+}
+#mc_embed_signup{
+width:100%;
+}
+#mc_embed_signup input {
+background: #fff !important;
+-moz-box-shadow: inset 2px 2px 4px rgba(0,0,0,.10);
+-webkit-box-shadow: inset 2px 2px 4px rgba(0,0,0,.10);
+box-shadow: inset 2px 2px 4px rgba(0,0,0,.10);
+text-align: center;
+font-size: 15px;
+text-shadow: #fff 1px 1px;
+width: 30%;
+min-width:250px;
+padding: 12px;
+display: block;
+-khtml-border-radius: 3px;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+background-color: #f5f5f5;
+border: 1px solid #ddd;
+border-radius: 3px;
+color:#333;
+margin:10px auto;
+margin:1rem auto;
+}
+#mc_embed_signup .email{
+transition: 0.5s ease-in; 
+-webkit-transition: 0.5s ease-in;
+-moz-transition: 0.5s ease-in;
+-o-transition: 0.5s ease-in;
+-ms-transition: 0.5s ease-in;
+transition: 0.5s ease-in;
+}
+#mc_embed_signup .email:focus{
+width:31%; 
+background-color:#e0eeee !important;
+}
+#mc_embed_signup .button{
+width:10%;
+min-width:80px;
+background: #c3ddbb !important;
+-webkit-transition: 0.2s ease-in;
+-moz-transition: 0.2s ease-in;
+-o-transition: 0.2s ease-in;
+-ms-transition: 0.2s ease-in;
+transition: 0.2s ease-in;
+}
+#mc_embed_signup .button:hover,
+#mc_embed_signup .button:focus,
+#mc_embed_signup .button:active
+{
+background-color: #c3dddd !important;
+}
+#content{
+font-size:20px;
+font-size:2rem;
+line-height: 2.5rem
 }

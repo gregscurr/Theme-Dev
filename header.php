@@ -19,32 +19,46 @@
 		<!--[if lt IE 9]>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 		<![endif]-->
+
 		<?php wp_head(); ?>
     </head>
 	<body <?php body_class(); ?>>
-	<div id="wrap">
-		<div class="wrapper">
-			<header id="branding" class="row" role="banner">
-				<hgroup class="col span_16 clr">
-					<h1 class="site-title"><?php echo get_bloginfo ( 'title', 'display' ); ?></h1>
-					<h2 class="tagline"><?php bloginfo ( 'description' ); ?></h2>
-				</hgroup>
-				<div id="header-banner" class="col span_8 clr">
-					<?php if ( of_get_option( 'header-banner' ) ) : ?>
-						<?php echo of_get_option( 'header-banner' ); ?>
+		<header id="site-head" class="row">
+			<div class="logo-cont col span_4">
+				<?php if ( is_front_page() ){ ?>
+					<h1 id="site-title"><?php echo get_bloginfo ( 'title', 'display' ); ?></h1>
+				<?php } else { ?>
+					<span id="site-title"><?php echo get_bloginfo ( 'title', 'display' ); ?></span>
+				<?php } ?>
+			</div>
+			<nav id="head-nav" class="navigation col span_14">
+				<?php wp_nav_menu( array( 'theme_location' => 'head-menu', 'container_class' => 'bar-nav-links' ) ); ?>
+			</nav>
+			<div class="bar-cta col span_6">
+				<?php // if ( of_get_option( 'top-social' ) ) : ?>
+					<div id="social">
+						<a href="https://github.com/pattonwebz/theme-dev" class="genericon genericon-github"></a>
+						<a href="http://www.facebook.com/ThemeDevFramework" class="genericon genericon-facebook"></a>
+						<a href="https://twitter.com/Theme_Dev_Frame" class="genericon genericon-twitter"></a>
+						<a href="https://plus.google.com/u/0/b/100985048306496223683/" class="genericon genericon-googleplus"></a>
+					</div>
+				<?php // endif; ?>
+			</div>
+		</header>
+		<div class="cta-cont">
+			<div id="cta-block">
+				<div class="feat-sec">
+					<?php if ( of_get_option( 'themedev_display_featured_bar' ) ) : ?>
+						<?php if ( of_get_option( 'themedev_featured_bar' ) ) : ?>
+							<?php echo of_get_option( 'themedev_featured_bar' ); ?>
+							<?php if ( of_get_option( 'themedev_mail_list' ) ) : ?>
+								<?php echo of_get_option( 'themedev_mail_list' ); ?>
+							<?php endif; ?>
+						<?php endif; ?>
 					<?php endif; ?>
 				</div>
-			</header>
-			<nav id="site-nav" class="main-navigation" role="navigation">
-				<div id="nav-toggle"><h3>Navigation</h3></div>
-				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_id' => 'responsive-nav', 'container_class' => 'nav-links' ) ); ?>
-			</nav>
-			
-<?php if ( of_get_option( 'themedev_display_featured_bar' ) ) : ?>
-	<?php if ( of_get_option( 'themedev_featured_bar' ) ) : ?>
-		<div id="featured-bar" class="row featured-bar">
-			<?php echo of_get_option( 'themedev_featured_bar' ); ?>
+			</div>
 		</div>
-	<?php endif; ?>
-<?php endif; ?>
-			<div id="main"class="row">
+	<div id="wrap">
+		<div class="wrapper">
+			<div id="main" class="row">

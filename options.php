@@ -303,10 +303,18 @@ function optionsframework_options() {
 		'type' => 'textarea');
 	
 	$options[] = array(
-		'name' => __('Header Banner'),
-		'desc' => __('Content for the top banner, most code gets stripped from here.'),
-		'id' => 'header-banner',
+		'name' => __('Mailchimp'),
+		'desc' => __('Mailchimp embed'),
+		'id' => 'themedev_mail_list_2',
 		'type' => 'textarea');
+		
+	$options[] = array(
+		'name' => __('Default Text Editor', 'options_framework_theme'),
+		'desc' => sprintf( __( 'You can also pass settings to the editor.  Read more about wp_editor in <a href="%1$s" target="_blank">the WordPress codex</a>', 'options_framework_theme' ), 'http://codex.wordpress.org/Function_Reference/wp_editor' ),
+		'id' => 'themedev_mail_list',
+		'type' => 'editor',
+		'settings' => $wp_editor_settings );
+		
 	return $options;
 }
 
