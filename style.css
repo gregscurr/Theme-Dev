@@ -92,6 +92,7 @@ background:#ADD8E6;
 }
 #site-head h1,
 #site-head span{
+font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 display:block;
 padding-bottom:0;
 }
@@ -101,6 +102,9 @@ min-height:40px;
 .logo-cont {
 text-align: center;
 padding:10px 5px;
+}
+.logo-cont a{
+text-decoration:none;
 }
 #social{
 text-align:center;
@@ -127,9 +131,23 @@ height:100%;
 text-align:center;
 padding:10px 5px;
 }
-#head-nav .current-menu-item,
+#head-nav .current-menu-item a {
+text-decoration:underline;
+}
+#head-nav li{
+background-color:#ADD8E6 !important;
+-webkit-transition: 2s ease-in;
+-moz-transition: 2s ease-in;
+-o-transition: 2s ease-in;
+-ms-transition: 2s ease-in;
+transition: 2s ease-in;
+}
 #head-nav li :hover {
-background:#dfffff;
+background-color: #e0eeee !important;
+text-decoration:underline;
+}
+#head-nav a{
+text-decoration:none;
 }
 #head-nav .children{
 display:none;

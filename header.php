@@ -26,9 +26,9 @@
 		<header id="site-head" class="row">
 			<div class="logo-cont col span_4">
 				<?php if ( is_front_page() ){ ?>
-					<h1 id="site-title"><?php echo get_bloginfo ( 'title', 'display' ); ?></h1>
+					<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php } else { ?>
-					<span id="site-title"><?php echo get_bloginfo ( 'title', 'display' ); ?></span>
+					<span id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
 				<?php } ?>
 			</div>
 			<nav id="head-nav" class="navigation col span_14">
